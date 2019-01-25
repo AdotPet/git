@@ -88,4 +88,11 @@ git merge develop
 
 ## Enviando um Pull Resquest
 
-**Em breve**
+### Em breve
+
+
+**Copyright**
+
+Copyright 2019, [Lucas Leandro](https://github.com/lucasleandrobr)
+
+MIT License, http://www.opensource.org/licenses/mit-license.php
