@@ -18,8 +18,8 @@ git clone git@github.com:{username}/{forked-projet.git}
 **GIT IDE**
 Saiba um pouco mais sobre IDE's git e como elas podem te ajudar no seu dia-a-dia
 
-[Github Desktop](https://desktop.github.com/) | Gratuito
-[GitKraken](https://www.gitkraken.com/) | Gratuito para projetos opensource
+- [Github Desktop](https://desktop.github.com/) | Gratuito
+- [GitKraken](https://www.gitkraken.com/) | Gratuito para projetos opensource
 
 ## Mantendo seu Fork atualizado
 
@@ -42,7 +42,7 @@ git fetch upstream
 
 # Veja todas branchs, incluindo as do upstream
 git branch -va
-`` `
+```
 
 Agora, finalize sua própria ramificação master e mescle o branch master do repo upstream:
 
