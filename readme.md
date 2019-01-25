@@ -53,3 +53,39 @@ git merge upstream/master
 ```
 
 Se não houver commits exclusivos no branch master local, o git irá simplesmente executar um avanço rápido. No entanto, se você estiver fazendo alterações no master (na grande maioria dos casos, você provalvelmente não deveria está - [veja a próxima seção](#), você pode ter que lidar com conflitos. tenha cuidado para respeitar as alterações feitas pela `upstream`.
+
+agora, sua branch master local está atualizada com tudo que foi modificado.
+
+## Contribuindo com seu trabalho
+
+### Criando uma Branch
+
+Sempre que você começa a trabalhar em um novo recurso ou bugfix, é importante criar uma nova `branch`. Não é apenas o fluxo de trabalho adequado do git, mas também mantém suas alterações organizadas e separadas do branch master para que você possa enviar e gerenciar facilmente várias solicitações de `pull request` para cada tarefa que concluir.
+
+Como criar uma nova ramificação e começar a trabalhar nela:
+
+```
+# Checkout o branch master - você quer que seu novo branch tenha todas as informações do master
+git checkout master
+
+# Crie uma nova branch chamada feature/header
+git branch feature/header
+
+# Mudando para a sua nova branch de trabalho
+git checkout feature/header
+```
+
+Agora, você pode iniciar as modificações em sua nova branch de trabalho.
+
+Se você usa o conceito (Master recebe Develop recebe Features)
+ao terminar seu trabalho você deverá fazer o seu merge a develop local e ao finalizar todas as moficações que sempre são enviadas ao seu develop local, você irá digitar:
+
+```
+# Movendo modificações da develop local para a master local
+# Dentro da sua branch master
+git merge develop
+```
+
+## Enviando um Pull Resquest
+
+**Em breve**
