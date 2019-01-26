@@ -88,7 +88,36 @@ git merge develop
 
 ## Enviando um Pull Resquest
 
-### Em breve
+### Organizando seu projeto
+
+Antes de enviar sua primeira solicitação de `pull request`, você pode querer fazer algumas coisas para organizar sua branch e torná-la o mais simples possível para o `upstream` master possa testar, aceita e realizar o `merge` do seu trabalho.
+
+Se algum commit tiver sido feito para a branch master do seu upstream, você deve efetuar um rebase na sua área branch de desenvolvimento para que o `merge` seja um `fast-forward` para não exigir um trabalho com conflitos.
+
+```
+# Fetch upstream master e merge com seu repositório master
+git fetch upstream
+git checkout master
+git merge upstream/master
+
+# Se houver novos commits, efetue um rebase do seu branch de desenvolvimento
+git checkout {branch-name}
+git rebase master
+```
+
+Agora, pode ser desejável eliminar alguns dos seus commits menores em um pequeno número de commits maiores e mais coesos. você pode fazer isso com um `rebase` interativo
+
+```
+# Rebase todos os commits no seu branch de desenvolvimento
+git checkout
+git rebase -i master
+```
+
+Isso irá abrir um editor de texto onde você pode especificar quais commits para `squash`
+
+
+
+
 
 
 **Copyright**
