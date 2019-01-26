@@ -1,4 +1,8 @@
-# ![Github](https://suse.me/sites/default/files/styles/thumbnails_32x32/public/icons/9331c338-165f-43f5-acd3-10ce5afd14c9_11457.png?itok=lWoD9e8c) Git & Github
+# ![Github](https://suse.me/sites/default/files/styles/thumbnails_32x32/public/icons/9331c338-165f-43f5-acd3-10ce5afd14c9_11457.png?itok=lWoD9e8c) Git & Github 
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)]()
+![](https://img.shields.io/github/license/adotpet/adotpet.svg)
+![](https://img.shields.io/github/last-commit/adotpet/git.svg)
+![](https://img.shields.io/github/commit-status/adotpet/git/master/d634f9aab0fe1286958c0e5ebd66f03e89da892a.svg)
 
 Se você está tentando desenvolver uma comunidade de código aberto ou colaborar em seus próprios projetos, é essencial saber como bifurcar e gerar pedidos de `pull request` corretamente. Infelizmente, é muito fácil cometer erros ou não saber o que você deve fazer quando estiver aprendendo o processo inicialmente. Eu sei que certamente tive um problema inicial considerável como ele, e achei que muitas das informações no Github e na internet eram bastante fragmentadas e incompletas e decidimos criar este novo tutorial.
 
@@ -115,6 +119,58 @@ git rebase -i master
 
 Isso irá abrir um editor de texto onde você pode especificar quais commits para `squash`
 
-### Enviando seu Pull Request
+## Enviando seu Pull Request
 
 Depois de confirmar e enviar todas as alterações para o GitHub, vá até a página do seu `Fork` no GitHub, selecione sua `branch` de desenvolvimento e clique no botão de solicitação de `pull request`. Se você precisar fazer algum ajuste na solicitação de pull, basta enviar as atualizações para o GitHub. Sua solicitação de `pull request` rastreará automaticamente as alterações em sua `branch` de desenvolvimento e atualização.
+
+## Aceitando e mesclando uma solicitação pull request
+
+Observe que, diferentemente das seções anteriores que foram escritas a partir da perspectiva de alguém que criou uma `branch` e gerou uma solicitação `pull request`, essa seção é gravada da perspectiva do proprietário do repositório original que está manipulando uma solicitação de recebindo de código. Assim, onde o "forker" estava se referindo ao repositório original como `upstream`, agora estamos olhando para ele como o dono daquele repositório original e do `remote` padrão.
+
+### Fazer um checkout e testar solicitações de pull request
+
+Abra o arquivo `.git/config` e adicione uma nova linha em `[remote "origin"]`:
+
+```
+fetch = +refs/pull/*/head:refs/pull/origin/*
+```
+
+Agora você pode buscar e fazer checkout em qualquer solicitação de `pull request` e testar o código antes de realizar o `merge` entre as `branch`.
+
+```
+# Fetch todas as branchs com pull request
+git fetch origin
+
+# Faça o checkout em uma determinada branch de pull request com base no seu número de pull request
+git checkout -b 999 pull/origin/999
+```
+
+Lembre-se de que essas ramificações serão somente de leitura e você não poderá enviar nenhuma alteração.
+
+### Merge um Pull request automáticamente
+
+Nos casos em que o `merge` é um fast-foward, você poderá fazer a mesclagem automaticamente apenas clicando no botão na página de solicitações de `pull request` no GitHub.
+
+### Realizando merge manual de uma solicitação pull request
+
+Para fazer a mesclagem manualmente, você precisará fazer o checkout na `branch` de destino no contribuinte e mesclar com sua branch de desenvolvimento e enviar por push.
+
+```
+# Finalize o branch que você está mesclando no repositório de destino
+git checkout master
+
+# Puxe a branch de desenvolvimento do seu contribuidor, onde o contribuição dele foi realizada
+git pull https://github.com/{forkuser}/{forkedrepo}.git release
+
+# Mesclando com seu branch de desenvolvimento
+git merge newfeature
+
+# Enviando para seu master com o novo recurso mesclado nele
+git push origin master
+```
+
+Agora que você terminou com a `branch` de desenvolvimento, você está livre para excluí-la.
+
+```
+git branch -d newfeature
+```
