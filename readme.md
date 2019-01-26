@@ -115,10 +115,9 @@ git rebase -i master
 
 Isso irá abrir um editor de texto onde você pode especificar quais commits para `squash`
 
+### Enviando seu Pull Request
 
-
-
-
+Depois de confirmar e enviar todas as alterações para o GitHub, vá até a página do seu `Fork` no GitHub, selecione sua `branch` de desenvolvimento e clique no botão de solicitação de `pull request`. Se você precisar fazer algum ajuste na solicitação de pull, basta enviar as atualizações para o GitHub. Sua solicitação de `pull request` rastreará automaticamente as alterações em sua `branch` de desenvolvimento e atualização.
 
 **Copyright**
 
