@@ -1,4 +1,4 @@
-# Git & Github
+# ![Github](https://suse.me/sites/default/files/styles/thumbnails_32x32/public/icons/9331c338-165f-43f5-acd3-10ce5afd14c9_11457.png?itok=lWoD9e8c) Git & Github
 
 Se você está tentando desenvolver uma comunidade de código aberto ou colaborar em seus próprios projetos, é essencial saber como bifurcar e gerar pedidos de `pull request` corretamente. Infelizmente, é muito fácil cometer erros ou não saber o que você deve fazer quando estiver aprendendo o processo inicialmente. Eu sei que certamente tive um problema inicial considerável como ele, e achei que muitas das informações no Github e na internet eram bastante fragmentadas e incompletas e decidimos criar este novo tutorial.
 
@@ -115,13 +115,6 @@ git rebase -i master
 
 Isso irá abrir um editor de texto onde você pode especificar quais commits para `squash`
 
+### Enviando seu Pull Request
 
-
-
-
-
-**Copyright**
-
-Copyright 2019, [Lucas Leandro](https://github.com/lucasleandrobr)
-
-MIT License, http://www.opensource.org/licenses/mit-license.php
+Depois de confirmar e enviar todas as alterações para o GitHub, vá até a página do seu `Fork` no GitHub, selecione sua `branch` de desenvolvimento e clique no botão de solicitação de `pull request`. Se você precisar fazer algum ajuste na solicitação de pull, basta enviar as atualizações para o GitHub. Sua solicitação de `pull request` rastreará automaticamente as alterações em sua `branch` de desenvolvimento e atualização.
