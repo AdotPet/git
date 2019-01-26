@@ -1,4 +1,4 @@
-# Git & Github
+# ![Github](https://suse.me/sites/default/files/styles/thumbnails_32x32/public/icons/9331c338-165f-43f5-acd3-10ce5afd14c9_11457.png?itok=lWoD9e8c) Git & Github
 
 Se você está tentando desenvolver uma comunidade de código aberto ou colaborar em seus próprios projetos, é essencial saber como bifurcar e gerar pedidos de `pull request` corretamente. Infelizmente, é muito fácil cometer erros ou não saber o que você deve fazer quando estiver aprendendo o processo inicialmente. Eu sei que certamente tive um problema inicial considerável como ele, e achei que muitas das informações no Github e na internet eram bastante fragmentadas e incompletas e decidimos criar este novo tutorial.
 
